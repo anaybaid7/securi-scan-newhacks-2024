@@ -1,11 +1,76 @@
 <!DOCTYPE html>
-<html>
-<head><title>Vulnerability Scanner</title></head>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Vulnerability Scanner</title>
+</head>
 <body>
-    <h2>Enter URL to scan</h2>
-    <form action="/scan" method="post">
-        <input type="text" name="url" placeholder="http://example.com" required>
-        <button type="submit">Scan</button>
-    </form>
+    <header>
+        <div class="logo">VulnScan Pro</div>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Welcome to VulnScan Pro</h1>
+            <p>Your ultimate tool for web vulnerability scanning.</p>
+            <form id="scanForm" action="/scan" method="POST">
+                <input type="url" name="url" placeholder="Enter URL to scan..." required>
+                <button type="submit" class="btn">Scan Now</button>
+                <button type="reset" class="btn">Reset</button>
+            </form>
+            <div class="social-buttons">
+                <a href="#" class="btn btn-facebook">Share on Facebook</a>
+                <a href="#" class="btn btn-twitter">Tweet</a>
+                <a href="#" class="btn btn-linkedin">Connect on LinkedIn</a>
+            </div>
+        </section>
+        
+        <section id="about" class="info-section">
+            <h2>About Our Tool</h2>
+            <p>VulnScan Pro is designed to help you identify security vulnerabilities in your web applications quickly and efficiently.</p>
+        </section>
+        
+        <section id="features" class="info-section">
+            <h2>Features</h2>
+            <ul class="feature-list">
+                <li>Real-time scanning</li>
+                <li>Detailed reporting</li>
+                <li>User-friendly interface</li>
+                <li>Advanced threat detection</li>
+                <li>Support for multiple protocols</li>
+                <li>Community-driven insights</li>
+            </ul>
+        </section>
+        
+        <section id="contact" class="info-section">
+            <h2>Contact Us</h2>
+            <form id="contactForm" action="/contact" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+                <button type="submit" class="btn">Send Message</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 VulnScan Pro. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById('scanForm').onsubmit = function() {
+            alert("Scanning started!");
+        };
+    </script>
 </body>
 </html>
