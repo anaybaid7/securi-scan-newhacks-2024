@@ -1,0 +1,6 @@
+vulnerability_scanner/
+├── app.py
+├── templates/
+│   ├── index.html
+│   └── report.html
+└── requirements.txt
